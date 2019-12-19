@@ -368,7 +368,8 @@ template {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.142rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -377,6 +378,14 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
+
+label.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 .container {
   width: 85%;
@@ -804,6 +813,51 @@ img {
   margin-bottom: 40px;
   padding: 18px 54px; }
 
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    margin-top: -10rem;
+    margin-bottom: 3.714rem;
+    padding: 2.5rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.428rem;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 3.214rem;
+    margin-top: 0; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -847,10 +901,12 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.428rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+  .modal__input:last-of-type {
+    margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -963,15 +1019,12 @@ img {
     font-size: 1.64rem; }
   .hero__scroll-down {
     display: none; }
-  .hero__content {
-    max-width: 22.86rem;
-    margin-left: 100px; }
   .hero__text {
     font-size: 1.29rem;
     margin-bottom: 2.28rem; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
+    min-width: 39rem;
     margin-bottom: 1.85rem; }
   .projects .col-50 {
     width: 100%; }
@@ -1016,6 +1069,11 @@ img {
       margin-bottom: 1rem; }
       .control__input::placeholder {
         color: #fff; }
+    .control__button {
+      min-width: 35rem; }
+    .control__policy-label {
+      color: #fff;
+      margin-right: 0; }
   .types .card__pricetag {
     margin-bottom: 2rem;
     padding: 1rem 2rem; }
@@ -1027,7 +1085,81 @@ img {
     margin-left: 5px; }
   .design .card__pricetag {
     padding: 1rem 4rem;
-    margin-bottom: -0.1rem; } }
+    margin-bottom: -0.1rem; }
+  .policy__label {
+    margin-left: -170px; }
+  .footer__button {
+    min-width: 100rem; } }
+
+@media screen and (max-width: 480px) {
+  .hero__content {
+    margin-left: 10px; }
+  .hero__title--primary {
+    text-align: center; }
+  .hero__text {
+    font-size: 1.29rem; }
+  .hero__button {
+    margin-bottom: 2.28rem;
+    display: block;
+    min-width: 30rem;
+    margin-bottom: 1.85rem; }
+  .projects .section-title__heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 138.6%;
+    letter-spacing: -0.07em; }
+  .projects .section-title__word {
+    margin-left: 150px; }
+  .projects .section-title__text {
+    margin-left: 60px; }
+  .projects .swiper-slide {
+    text-align: center; }
+  .projects .swiper-button-prev {
+    margin-left: 115px; }
+  .projects .swiper-button-next {
+    margin-left: 115px; }
+  .projects .swiper-container-horizontal > .swiper-pagination-bullets {
+    margin-left: 120px; }
+  .projects .policy__label--center {
+    margin-left: -70px; }
+  .projects .footer__button {
+    min-width: 30rem; }
+  .projects .modal__button {
+    min-width: 40rem; } }
+
+@media screen and (max-width: 380px) {
+  .hero__content {
+    margin-left: 15px; }
+  .hero__title--primary {
+    text-align: center; }
+  .projects .section-title__heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 138.6%;
+    letter-spacing: -0.07em; }
+  .projects .section-title__word {
+    margin-left: 110px; }
+  .projects .section-title__text {
+    margin-left: 15px; }
+  .projects .swiper-slide {
+    text-align: center; }
+  .projects .swiper-button-prev {
+    margin-left: 70px; }
+  .projects .swiper-button-next {
+    margin-left: 70px; }
+  .projects .swiper-container-horizontal > .swiper-pagination-bullets {
+    margin-left: 70px; } }
+
+.policy__label {
+  margin-left: -20px; }
+
+.footer__button {
+  min-width: 22rem; }
+
+.modal__button {
+  min-width: 25rem; }
 
 @media screen and (max-width: 320px) {
   .hero__button {
@@ -1039,18 +1171,18 @@ img {
     font-size: 20px;
     font-weight: 400; }
   .projects .section-title__word {
-    margin-left: 70px;
+    margin-left: 80px;
     font-size: 20px; }
   .projects .section-title__text {
     margin-left: -10px; }
-  .swiper-slide {
+  .projects .swiper-slide {
     text-align: center; }
-  .swiper-button-prev {
+  .projects .swiper-button-prev {
     margin-left: 40px; }
-  .swiper-button-next {
-    margin-left: 50px; }
-  .swiper-container-horizontal > .swiper-pagination-bullets {
-    margin-left: 50px; }
+  .projects .swiper-button-next {
+    margin-left: 40px; }
+  .projects .swiper-container-horizontal > .swiper-pagination-bullets {
+    margin-left: 40px; }
   .types .card__text {
     margin-top: -8rem;
     margin-bottom: 2rem;
@@ -1063,7 +1195,14 @@ img {
   .design .card__text {
     width: 75%; }
   .design .card__pricetag {
-    padding: 1rem; } }
+    padding: 1rem; }
+  .modal__button {
+    min-width: 19rem; }
+  .policy__label {
+    margin-left: -10px; }
+  .footer__button {
+    min-width: 18rem;
+    margin-left: -10px; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {

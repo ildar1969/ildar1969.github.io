@@ -49,4 +49,101 @@ $(document).ready(function () {
 
   new WOW().init();
 
+  // Валидация формы
+
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не более 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email в формате: name@domain.com"
+      }
+    }
+  });
+//маска для номера телефона
+
+$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+//валидация для control__form
+$('.control__form').validate({
+  errorClass: "invalid",
+  rules: {
+    // simple rule, converted to {required:true}
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required"
+      
+  },
+  messages: {
+    userName: {
+      required: "Имя обязательно",
+      minlength: "Имя не короче двух букв",
+      maxlength: "Имя не более 15 букв"
+    },
+    userPhone: "Телефон обязателен"
+    
+  }
+});
+//маска для номера телефона
+
+$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+
+// Валидация для footer__form
+$('.footer__form').validate({
+  errorClass: "invalid",
+  rules: {
+    // simple rule, converted to {required:true}
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required",
+    // compound rule
+    userQuestion: {
+      required: true,
+      maxlength: 50
+    }
+  },
+  messages: {
+    userName: {
+      required: "Имя обязательно",
+      minlength: "Имя не короче двух букв",
+      maxlength: "Имя не более 15 букв"
+    },
+    userPhone: "Телефон обязателен",
+    userQuestion: {
+      required: "Заполните поле",
+      maxlength: "Сообщение не более 50 знаков"
+    }
+  }
+});
+//маска для номера телефона
+
+$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
 });
