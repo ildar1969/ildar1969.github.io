@@ -1,4 +1,4 @@
 # Ильдар Фатахов
 Домашние работы
 
-[дз24](https://ildar1969.github.io/dz/)
+[дз25](https://ildar1969.github.io/dz/)
